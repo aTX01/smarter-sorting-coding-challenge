@@ -1,3 +1,4 @@
 env/
 .~*
+__pycache__
 example_data.csv
