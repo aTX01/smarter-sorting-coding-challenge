@@ -29,6 +29,19 @@ def list_products():
     else:
         return{"products":list(products.values())}
 
+def create_product(new_product):
+    product_name = new_product['name']
+    products[product_name] = new_product
+    return new_product
+
+@app.route('/products', methods=['GET', 'POST'])
+def products_route():
+    if request.method == 'GET':
+        return list_products()
+    elif request.method == "POST":
+        return create_product(request.get_json(force=True))
+
+
 @app.route('/products/<product_name>')
 def get(product_name):
     return products[product_name]
