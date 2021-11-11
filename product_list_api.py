@@ -11,7 +11,7 @@ products = {"clorox": {"name": "clorox", "ingredients": ["sodium", "water", "chl
 
 print("Dictionary:", products)
 
-@app.get('/all_products')
+@app.get('/')
 def list_all_products():
     return{"products":list(products.values())}
 
