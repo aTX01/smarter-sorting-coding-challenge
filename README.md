@@ -55,6 +55,16 @@ For example:
 $ curl -X GET -G http://127.0.0.1:5000/products -d "ingredient=water"
 ```
 
+To `GET` a particular product entry:
+```
+$ curl -X GET http://127.0.0.1:5000/products/<product_name>
+```
+For example:
+```
+$ curl -X GET -G http://127.0.0.1:5000/products/clorox -d "ingredient=water"
+```
+
+
 To `POST` new products to the list:
 ```
 curl -X POST http://127.0.0.1:5000/programming_languages
