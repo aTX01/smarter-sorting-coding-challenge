@@ -47,7 +47,7 @@ To `POST` new products to the list:
 ```
 curl -X POST http://127.0.0.1:5000/products
       -H 'Content-Type: application/json'
-      -d '{"name": "<product_name", "ingredients":["<ingredient1>", "<ingredient2>", ...]}'
+      -d '{"name": "<product_name>", "ingredients":["<ingredient1>", "<ingredient2>", ...]}'
 ```
 
 *NOTE*: The application product list is pre-populated with some example products.
@@ -77,7 +77,7 @@ $ curl -X GET http://127.0.0.1:5000/products/<product_name>
 ```
 For example:
 ```
-$ curl -X GET -G http://127.0.0.1:5000/products/clorox -d "ingredient=water"
+$ curl -X GET -G http://127.0.0.1:5000/products/clorox
 ```
 
 ### Endpoints ###
